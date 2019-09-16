@@ -56,7 +56,7 @@ ROOT_URLCONF = '{{ project_name }}.site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [SITE_DIR / 'templates'],
+        'DIRS': [str(SITE_DIR / 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,7 +78,7 @@ WSGI_APPLICATION = '{{ project_name }}.site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': SITE_DIR / 'db.sqlite3',
+        'NAME': str(SITE_DIR / 'db.sqlite3'),
     }
 }
 
