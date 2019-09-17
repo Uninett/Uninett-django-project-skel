@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / ...
-SETIINGS_DIR = Path.cwd()
-SITE_DIR = SETIINGS_DIR.parent
+SETTINGS_DIR = Path(__file__).resolve().parent
+SITE_DIR = SETTINGS_DIR.parent
 BASE_DIR = SITE_DIR.parent
 
 
